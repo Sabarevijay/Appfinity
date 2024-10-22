@@ -5,7 +5,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #beb0a7, #695CFE);
+    /* background: linear-gradient(135deg, #beb0a7, #695CFE); */
+    background: linear-gradient(135deg, #ffffff, #a69ff3);
     margin: 0;
     z-index: 2;
 }

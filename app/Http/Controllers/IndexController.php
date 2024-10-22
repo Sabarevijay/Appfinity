@@ -6,7 +6,7 @@ class IndexController extends Controller
 {
    
     public function index(){
-        return view('front.index');
+        return view('tasks.home');
     }   
     public function calc(){
         return view('tasks.calc');

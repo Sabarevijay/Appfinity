@@ -11,19 +11,30 @@ Route::get('/', function () {
 // Login page
 Route::get('/admin/login', [LoginController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [LoginController::class, 'login'])->name('admin.login');
+
 // Logout-page
 Route::post('/admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
+
 // Registration page
 Route::get('/admin/register', [LoginController::class, 'showRegistrationForm'])->name('admin.register'); 
 Route::post('/admin/register', [LoginController::class, 'register'])->name('admin.register.post');
+
 // Front page
 Route::get('/front/index', [IndexController::class, 'index'])->name('front.index');
+
+//admin page
+Route::get('/admin/admin', [LoginController::class, 'admin'])->name('admin.admin');
+Route::delete('/admin/user/{id}', [LoginController::class, 'destroy'])->name('admin.user.destroy');
+
 // Calculator page
 Route::get('/tasks/calc', [IndexController::class, 'calc'])->name('tasks.calc');
+
 // Timer page
 Route::get('/tasks/timer', [IndexController::class, 'timer'])->name('tasks.timer');
+
 // Todo page
 Route::get('/tasks/todo', [IndexController::class, 'todo'])->name('tasks.todo');
+
 
 
 Route::get('tasks/todo',[TodoController::class,'todo'])->name('tasks.todo');

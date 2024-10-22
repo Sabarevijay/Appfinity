@@ -8,7 +8,8 @@
     width: 100%;
     min-height: 100vh;
     /* background: linear-gradient(135deg,#beb0a7,#eb916e ); */
-    background: linear-gradient(135deg, #beb0a7, #695CFE);
+    /* background: linear-gradient(135deg, #beb0a7, #695CFE); */
+    background: linear-gradient(135deg, #ffffff, #a69ff3);
     padding: 10px;
 }
 /* .btn-danger{
@@ -60,7 +61,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .container button:hover {
-    background: #80332c; /* Slightly darker color for highlight */
+    transform: scale(1.05);
+    background: #4b4772; /* Slightly darker color for highlight */
+    /* transform: translateY(5px); */
 }
 
 .todo-app{
@@ -102,7 +105,7 @@
     align-items: center;
     justify-content: space-between;
     background: #edeef0;
-    border-radius: 30px;
+    border-radius: 12px;
     padding-left: 20px;
     margin-bottom: 25px;
     /* border: black solid 1px; */
@@ -121,12 +124,13 @@ input{
 .todo-app button{
     border: none;
     outline: none;
-    background: #ff5945;
+    background: #695CFE;
+    /* background: #ff5945; */
     color: #fff;
     padding: 16px 50px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 30px; 
+    border-radius: 12px; 
     border: black solid 1px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -137,6 +141,8 @@ input{
     user-select: none;
     cursor: pointer;
     position: relative;
+    word-wrap: break-word; /* Added to ensure word wrap */
+    white-space: normal; 
 }
 .todo-app ul li::before{
     content: '';
@@ -163,12 +169,14 @@ input{
 } */
 .todo-app ul li span:hover{
     background: #edeef0;
+    /* transform: translateY(-5px); */
  }
 
  .todo-app ul li.checked{
     color: #555;
     text-decoration: line-through;
+    /* transform: translateY(-5px); */
 }
 .todo-app ul li.checked::before{
-    background-image: url('/images/checked.png');
+    background-image: url('/images/check-2.png');
 }

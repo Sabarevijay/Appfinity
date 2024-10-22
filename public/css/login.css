@@ -11,7 +11,8 @@
     width: 100%;
     min-height: 100vh;
     /* background: linear-gradient(135deg, #beb0a7, #eb916e); */
-    background: linear-gradient(135deg, #beb0a7, #695CFE);
+    /* background: linear-gradient(135deg, #beb0a7, #695CFE); */
+    background: linear-gradient(135deg, #ffffff, #a69ff3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,7 +120,7 @@
 button {
     width: 100%;
     padding: 12px 0;
-    background: #ff5945;
+    background: #695CFE;
     color: white;
     font-size: 18px;
     border: none;
@@ -131,5 +132,6 @@ button {
 }
 
 button:hover {
-    background: #e14e39;
+    background: #4b4772;
+    transform: translateY(-5px);
 }

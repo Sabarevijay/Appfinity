@@ -43,6 +43,14 @@
                 </li>
 
                 <ul class="menu-links">
+                    
+                <li class="nav-link">
+                        <a href="{{ route('front.index') }}">
+                            <i class='bx bx-home icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                     
                     <li class="nav-link">
                         <a href="{{ route('tasks.calc') }}">
                             @method('GET')
@@ -70,14 +78,8 @@
                     </li>
 
 
-                    <!-- <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-pie-chart-alt icon' ></i>
-                            <span class="text nav-text">Analytics</span>
-                        </a>
-                    </li>
 
-                    <li class="nav-link">
+                    <!-- <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-heart icon' ></i>
                             <span class="text nav-text">Likes</span>
@@ -96,7 +98,22 @@
                 </ul>
             </div>
 
+           
+
             <div class="bottom-content">
+           
+            @if(Auth::user()->id == 1)            
+            <li class="">
+            <form  id="admin-form" method="GET" action="{{ route('admin.admin') }}" style="float: left;">
+            @csrf
+                </form>
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('admin-form').submit();">
+                        <i class='bx bx-user icon' ></i>
+                        <span class="text nav-text">Admin</span>
+                    </a>
+                    </form>
+                </li>
+            @endif
            
                 <li class="">
                 <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
@@ -119,16 +136,18 @@
                         <span class="switch"></span>
                     </div>
                 </li>
+                <!-- <section class="home">
+                   <img  class="bit1" src="{{ asset('images/bit3.png') }}" alt="image">     -->
+                   <!-- <div class="text">Dashboard Sidebar</div> -->
+                <!-- </section> -->
                 
             </div>
+            
         </div>
 
     </nav>
 
-    <section class="home">
-        <img  class="bit1" src="{{ asset('images/bit1.png') }}" alt="image">    
-        <!-- <div class="text">Dashboard Sidebar</div> -->
-    </section>
+   
 
     <script>
         const body = document.querySelector('body'),
@@ -147,6 +166,8 @@ searchBtn.addEventListener("click" , () =>{
     sidebar.classList.remove("close");
 })
 
+
+
 modeSwitch.addEventListener("click" , () =>{
     body.classList.toggle("dark");
     
@@ -156,7 +177,17 @@ modeSwitch.addEventListener("click" , () =>{
         modeText.innerText = "Dark mode";
         
     }
-});
+})
+
+
+sidebar.addEventListener('mouseenter', () => {
+            sidebar.classList.remove("close");
+        });
+
+        // Close sidebar when mouse leaves
+        sidebar.addEventListener('mouseleave', () => {
+            sidebar.classList.add("close");
+        });
     </script>
 
 </body>
