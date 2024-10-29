@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\TodoController;
 
@@ -46,4 +47,11 @@ Route::middleware(['auth']) // Protect these routes
         Route::patch('/tasks/{id}/complete', [TodoController::class, 'complete'])->name('tasks.complete');
         Route::delete('/tasks/{id}', [TodoController::class, 'destroy'])->name('tasks.destroy');
     });
+
+//Booking
+
+Route::get('/tasks/book', [BookController::class, 'index'])->name('tasks.book');
+Route::post('/book-now', [BookController::class, 'bookNow'])->name('books.bookNow');
+//delete
+Route::delete('/books/delete/{id}', [BookController::class, 'delete'])->name('books.delete');
 

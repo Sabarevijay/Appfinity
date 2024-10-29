@@ -79,14 +79,15 @@
 
 
 
-                    <!-- <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-heart icon' ></i>
-                            <span class="text nav-text">Likes</span>
+                    <li class="nav-link">
+                        <a href="{{ route('tasks.book') }}">
+                        @method('GET')
+                            <i class='bx bx-book-add icon' ></i>
+                            <span class="text nav-text">Hall-Booking</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <!-- <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-wallet icon' ></i>
                             <span class="text nav-text">Wallets</span>

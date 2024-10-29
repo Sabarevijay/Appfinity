@@ -12,6 +12,7 @@ class task extends Model
         'task', 
         'is_completed',
         'user_id'
+        
     ];
     public function user()
     {

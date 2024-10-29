@@ -17,5 +17,8 @@ class IndexController extends Controller
     public function todo(){
         return view('tasks.todo');
     }
+    public function book(){
+        return view('tasks.book');
+    }
     
 }
