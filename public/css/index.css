@@ -122,8 +122,12 @@ header .image-text .name {
     font-weight: 600;
 }
 header .image-text img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 50px; 
-    margin-left: 2px;
+    /* margin-left: 2px; */
 }
 
 header .image-text .profession{
