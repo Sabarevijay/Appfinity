@@ -51,7 +51,7 @@
                         </a>
                     </li>
                      
-                    <li class="nav-link">
+                    <!-- <li class="nav-link">
                         <a href="{{ route('tasks.calc') }}">
                             @method('GET')
                             <i class='bx bx-calculator icon' ></i>
@@ -75,7 +75,7 @@
                             <span class="text nav-text">Todo-app</span>
                         </a>
                         
-                    </li>
+                    </li> -->
 
 
 
